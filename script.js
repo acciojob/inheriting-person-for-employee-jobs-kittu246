@@ -14,7 +14,8 @@ function Employee(name, age, jobTitle) {
 
    this.jobTitle= jobTitle;
 
-   Employee.prototype.__proto__=Person.prototype;
+   // Employee.prototype.__proto__=Person.prototype;
+	Employee.prototype = Object.create(Person.prototype);
 
    Employee.prototype.jobGreet = function ()
    {
